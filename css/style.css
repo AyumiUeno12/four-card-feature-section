@@ -32,6 +32,11 @@ FONT SIZE SYSTEM (px):
 SPACING SYSTEM (px):
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
+### Font size default setup: 
+-Default: 1 rem = 16px
+-Reset: 1 rem = 10px
+10px/16px = 62.5%
+
 ### Font-weights:
 
 ExtraLight: 200
@@ -43,7 +48,6 @@ Default: 400
 
 ### Border-radius
 Default: 5px
-Medium: 
 
 */
 
@@ -57,20 +61,21 @@ Medium:
   box-sizing: border-box;
 }
 
-/* html {
+html {
   font-size: 62.5%;
-} */
+}
 
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 400;
   color: hsl(229, 6%, 66%);
 }
 
 span {
   color: hsl(234, 12%, 34%);
+  font-size: 2.4rem;
   font-weight: bold;
 }
 
@@ -84,14 +89,14 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  margin: auto 3.2rem;
 }
 
 .cards {
   display: grid;
   align-items: center;
-  gap: 30px;
-  max-width: 1120px;
+  gap: 3rem;
+  max-width: 112rem;
 }
 
 /*******************************/
@@ -99,21 +104,21 @@ span {
 /*******************************/
 
 .heading {
-  padding-top: 64px;
-  margin-bottom: 32px;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
   text-align: center;
 }
 
-h1 {
-  font-size: 24px;
+.heading h1 {
+  font-size: 2.4rem;
   font-weight: 200;
   line-height: 1.4;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .heading-text {
   line-height: 1.6;
-  max-width: 380px;
+  max-width: 38rem;
 }
 
 /*******************************/
@@ -123,26 +128,25 @@ h1 {
 .card {
   border-radius: 5px;
   box-shadow: 0 2.4rem 4.8rem rgba(18, 16, 16, 0.121);
-  padding: 20px;
-  margin-bottom: 24px;
-  max-width: 380px;
+  padding: 2.4rem;
+  max-width: 38rem;
 }
 
 .card h2 {
   color: hsl(234, 12%, 34%);
+  font-size: 2.4rem;
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .card p {
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .card-img {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 24px;
 }
 
 .supervisor {
@@ -166,13 +170,14 @@ h1 {
 /*******************************/
 
 footer {
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -182,26 +187,23 @@ footer {
 /*******************************/
 
 @media screen and (min-width: 900px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .container {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  .heading h1,
+  span {
+    font-size: 3.6rem;
   }
 
   .card {
     max-width: unset;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .card:first-child {
-    grid-row: 1/3;
+    grid-row: 1 / 3;
   }
 
   .card:last-child {
-    grid-row: 1/3;
     grid-column: 3;
+    grid-row: 1/3;
   }
 
   .card:hover {
@@ -210,6 +212,6 @@ footer {
 
   .heading-text {
     line-height: 1.6;
-    max-width: 500px;
+    max-width: 50rem;
   }
 }
